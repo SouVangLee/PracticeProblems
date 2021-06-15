@@ -1,7 +1,7 @@
 /*
-13. Roman to Integer
+13. Roman to Integer - Easy
 
-1) Store each case in a POJO and assign it a value, e.g. I = 1, V = 5
+1) Store each case as a key-value pair in a POJO, e.g. I = 1, V = 5
 2) Initialize a variable to keep track of the sum;
 3) Iterate through each roman numeral
 4) Check the next roman to see if it is a V, X, L, C, D, or M.
