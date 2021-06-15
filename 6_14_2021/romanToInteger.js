@@ -19,21 +19,19 @@ var romanToInt = function(s) {
       C: 100,
       D: 500,
       M: 1000,
-      IV: 4,
-      IX: 9,
-      XL: 40,
-      XC: 90,
-      CD: 400,
-      CM: 900
   }
   
   let sum = 0;
   for (let i = 0; i < s.length; i++) {
-      if (s[i + 1] && counts[(s[i] + s[i + 1])]) {
-          sum += counts[s[i] + s[i + 1]];
+      let current = s[i];
+      let next = s[i + 1];
+      if (s[i + 1] && counts[current] > counts[next]) {
+          sum += counts[current];
+      } else if (s[i + 1] && counts[current] < counts[next]) {
+          sum += counts[next] - counts[current]
           i++;
       } else {
-          sum += counts[s[i]];
+          sum += counts[current];
       }
   }
   return sum;
