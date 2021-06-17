@@ -3,14 +3,11 @@
 const twoSum = function(numbers, target) {
   let i = 0;
   let j = numbers.length - 1;
-  while (true) {
+  while (i < j) {
     let sum = numbers[i] + numbers[j];
-    if (i < j) {
-      if (sum > target) j--;
-      else if (sum < target) i++;
-      else if (sum === target) {
-        return [i + 1, j + 1];
-      }
-    } else return null;
+    if (sum > target) j--;
+    else if (sum < target) i++;
+    else return [i + 1, j + 1];
   }
+  return null;
 };
