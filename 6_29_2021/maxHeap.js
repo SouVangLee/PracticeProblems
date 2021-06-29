@@ -1,4 +1,4 @@
-class maxHeap {
+class MaxHeap {
   constructor() {
     this.array = [null];
   }
@@ -55,7 +55,21 @@ class maxHeap {
   }
 }
 
-let heap = new maxHeap();
+function heapSort(array) {
+  // Step 1: build the heap
+  let heap = new MaxHeap();
+  array.forEach(num => heap.insert(num));
+
+  // Step 2: constructed the sorted array
+  let sorted = [];
+  while (heap.array.length > 1) {
+      sorted.push(heap.deleteMax());
+  }
+
+  return sorted;
+}
+
+let heap = new MaxHeap();
 heap.insert(42);
 heap.insert(32);
 heap.insert(24);
@@ -65,3 +79,6 @@ heap.insert(27);
 console.log(heap.array);
 console.log(heap.deleteMax());
 console.log(heap.array);
+
+let arr = [42, 32, 24, 100, 50, 27]
+heapSort(arr);
