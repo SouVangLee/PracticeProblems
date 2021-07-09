@@ -20,4 +20,5 @@ const largestContiguousSubSum = function(arr) {
   return max;
 }
 
+console.log(largestContiguousSubSum([5, 3, -7, 6]));
 console.log(largestContiguousSubSum([5, 3, -7, -7, 5, -3, 10, -8, 6, 4]));
