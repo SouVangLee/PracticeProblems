@@ -1,6 +1,6 @@
 /*
 Example:
-array = [2, 6, 3, -4, -7, -10]
+array = [2, 6, 3, -4, -7, -10] // Distinct Integer Values
 targetSum = -1;
 
 Output: [3, 4] || [4, 3] (Order does not matter)
