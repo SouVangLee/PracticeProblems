@@ -1,5 +1,5 @@
 //Time Complexity: O(logn) | Space Complexity: O(1);
-function findClosestValueInBst(tree, target) {
+function findClosestValueInBST(tree, target) {
 	let minDiff = Infinity;
 	let result = Infinity;
 	let current = tree;
@@ -12,7 +12,7 @@ function findClosestValueInBst(tree, target) {
 		if (current.value > target) current = current.left;
 		else current = current.right;
 	}
-	return result;
+	return (result !== Infinity || (!tree && result === Infinity)) ? result : tree.value;
 }
 
 class BST {
