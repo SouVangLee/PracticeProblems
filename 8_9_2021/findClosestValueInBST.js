@@ -12,7 +12,7 @@ function findClosestValueInBST(tree, target) {
 		if (current.value > target) current = current.left;
 		else current = current.right;
 	}
-	return (result !== Infinity || (!tree && result === Infinity)) ? result : tree.value;
+	return result;
 }
 
 class BST {
